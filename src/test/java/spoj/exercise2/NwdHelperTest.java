@@ -31,4 +31,33 @@ public class NwdHelperTest {
         assertEquals(list8,list7);
     }
 
+    @Test
+    public void getNwdTest(){
+        //given
+        NwdHelper nwdHelper = new NwdHelper();
+        int result1 = nwdHelper.getNwd(6,15);
+        int result2 = nwdHelper.getNwd(11,33);
+        int result3 = nwdHelper.getNwd(6,18);
+        int result4 = nwdHelper.getNwd(9,81);
+        int result5 = nwdHelper.getNwd(13,15);
+        //when
+        //then
+        assertEquals(3,result1);
+        assertEquals(11,result2);
+        assertEquals(12,result5);
+    }
+
+    @Test
+    public void getCommonList(){
+        //given
+        NwdHelper nwdHelper = new NwdHelper();
+        List<Integer> commonList = nwdHelper.getCommonList(6, 12);
+        //when
+        System.out.println(commonList.toString());
+        //then
+
+
+
+    }
+
 }
